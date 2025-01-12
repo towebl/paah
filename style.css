@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Outfit&family=Pixelify+Sans:wght@400..700&family=Playwrite+CU:wght@100..400&family=Yellowtail&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Outfit", serif;
 }
 
 body {
@@ -11,22 +13,62 @@ body {
     background: #111827;
 }
 
+h1, h2, h3 {
+    font-family: "Jersey 10", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .hero {
-    background: linear-gradient(135deg, #059669, #047857);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/image\ \(2\).jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
     padding: 4rem 2rem;
     text-align: center;
+    position: relative;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: "Jersey 10", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     max-width: 800px;
     margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Add a subtle animation for the hero content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1, .hero p {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.hero p {
+    animation-delay: 0.3s;
 }
 
 .features {
